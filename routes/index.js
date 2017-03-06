@@ -87,6 +87,8 @@ router.post('/done', function(req, res, next){
 
 });
 
+
+/* Delete a task. Task _id is in req.body */
 router.post('/delete', function(req, res,next){
   req.task_col.deleteOne({ _id : ObjectID(req.body._id) }, function(err, result){
 
