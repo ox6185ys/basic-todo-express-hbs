@@ -52,7 +52,7 @@ router.post('/add', function(req, res, next){
 
   else {
     // Save new task with text provided, and completed = false
-    var task = { text : req.body.text, completed: false};
+    var task = { text : req.text, completed: false};
 
     req.task_col.insertOne(task, function(err, task) {
       if (err) {

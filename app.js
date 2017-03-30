@@ -1,6 +1,6 @@
 var express = require('express');
 var path = require('path');
-var favicon = require('serve-favicon');
+// var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -19,7 +19,7 @@ app.set('view engine', 'hbs');
 
 // MongoDB setup
 var mongo_pw = process.env.MONGO_PW;
-var url = 'mongodb://admin:' + mongo_pw + '@localhost:27017/todo?authSource=admin';
+var url = 'mongodb://localhost:27017/todo';
 MongoClient.connect(url, function(err, db){
 
   console.log('Errors? ' + err);
